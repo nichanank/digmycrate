@@ -1,13 +1,11 @@
 <h1 id="title">Dig my Crate</h1>
 <button>Dig</button>
 
-    <div>
-        <h2>User: <%= @user_name %></h2>
-        <h2><%= @cover_image %></h2>
-        <h2>Title: <%= @title %></h2>
-        <h2>Artist: <%= @artist %></h2>
-        <h2>Genre: <%= @genre %></h2>
-        <h2>Year of Release: <%= @year %></h2>
+    <div align="center">
+        <h2><%= @picked_record.title %> (<%= @picked_record.year %>)</h2>
+        <h2><%= @picked_record.artist %></h2>
+        <h2><%= @picked_record.genre %></h2>
+        <h2><%= @picked_record.styles %></h2>
         <p class="lead">You'll love managing your Photos with our application. Sign up!</p>
     </div>
         <div class="row">

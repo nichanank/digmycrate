@@ -21,11 +21,11 @@ class Collection
         title =  @wrapper.get_release(random_pick)['title']
         artist =  @wrapper.get_release(random_pick).artists[0].name
         year =  @wrapper.get_release(random_pick).year
-        genre =  @wrapper.get_release(random_pick)['genre']
+        genre =  @wrapper.get_release(random_pick)['genres']
         styles = @wrapper.get_release(random_pick)['styles']
         description =  @wrapper.get_release(random_pick)['profile']
-        cover_image = @wrapper.get_release(random_pick)['cover_image']
-        picked_record = Record.new(title, artist, year, genre, cover_image, description)
+        cover_image = @wrapper.get_release(random_pick).images[0]
+        picked_record = Record.new(title, artist, year, genre, styles, cover_image, description)
         picked_record
     end
 
