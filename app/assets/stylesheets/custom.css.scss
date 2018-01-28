@@ -1,0 +1,23 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#title {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.7em;
+    color: #355C7D;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+button {
+    background-color: #C06C84;
+    border: none;
+    color: white;
+    border-radius: 12px;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+}
