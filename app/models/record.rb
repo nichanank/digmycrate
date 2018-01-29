@@ -16,6 +16,5 @@ class Record
         dict = { "title" => @title, "artist" => @artist, "year" => @year, "genre" => genre, "styles" => styles, "img" => cover_image, "description" => @description }
         dict
     end
-    
-    
+
 end

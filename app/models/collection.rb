@@ -2,28 +2,30 @@ class Collection
     
     attr_accessor :records
     
-    #Records is an array of Hashes for record info
+    #Records is an array of Hashes for record info, pulled from Discogs user data
     def initialize(user_name)
         @wrapper = Discogs::Wrapper.new("digmycrate")
         @collection = @wrapper.get_user_collection(user_name)
     end
     
+    #Returns an array of record IDs in a collection
     def get_record_ids
         @ids = []
         @collection.releases.each do |release|
             @ids << release['id']
         end
+        puts @ids
         @ids
     end
     
     def pick_random_record(ids)
         random_pick = ids.sample
-        title =  @wrapper.get_release(random_pick)['title']
-        artist =  @wrapper.get_release(random_pick).artists[0].name
-        year =  @wrapper.get_release(random_pick).year
-        genre =  @wrapper.get_release(random_pick)['genres']
-        styles = @wrapper.get_release(random_pick)['styles']
-        description =  @wrapper.get_release(random_pick)['profile']
+        title = @wrapper.get_release(random_pick)['title']
+        artist = @wrapper.get_release(random_pick).artists[0].name
+        year = @wrapper.get_release(random_pick).year
+        genre = @wrapper.get_release(random_pick)['genres'].join(", ")
+        styles = @wrapper.get_release(random_pick)['styles'].join(", ")
+        description = @wrapper.get_release(random_pick)['profile']
         cover_image = @wrapper.get_release(random_pick).images[0]
         picked_record = Record.new(title, artist, year, genre, styles, cover_image, description)
         picked_record

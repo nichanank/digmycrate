@@ -1,37 +1,10 @@
-<h1 id="title">Dig my Crate</h1>
-<button>Dig</button>
-
-    <div align="center">
-        <h2><%= @picked_record.title %> (<%= @picked_record.year %>)</h2>
-        <h2><%= @picked_record.artist %></h2>
-        <h2><%= @picked_record.genre %></h2>
-        <h2><%= @picked_record.styles %></h2>
-        <p class="lead">You'll love managing your Photos with our application. Sign up!</p>
-    </div>
-        <div class="row">
-            <div class="plans clearfix">
-                <div class="col-lg-3 col-lg-offset-3 plan">
-                    <h2>Premium Plan</h2>
-                    <div class="price pull-right">Price: $10</div>
-                    <div class="features">
-                        <ul>
-                            <li>Unlimited Image Uploads</li>
-                            <li>Responsive design</li>
-                            <li>Access anywhere</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 plan">
-                    <h2>Amaze Plan</h2>
-                <div class="price pull-right">Price: $20</div>
-                <div class="features">
-                    <ul>
-                        <li>Unlimited Image Uploads</li>
-                        <li>Responsive design</li>
-                        <li>Access anywhere</li>
-                        <li class='extra'>Unlimited projects</li>
-                    </ul>   
-                </div>
-            </div>
-        </div>
-    </div>
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>A simple application to discover new music, via a record collection.<h1>
+        <p>Let's go crate digging...</p>
+    </body>
+    <%= link_to "Start digging!", dig_path, class: "button" %>
+</html>

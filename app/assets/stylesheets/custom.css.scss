@@ -5,19 +5,33 @@ h1 {
     text-align: center;
 }
 
-#title {
+head {
+    display: block;
+    background-color: #355C7D;
+    margin: none;
+}
+
+title {
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
     display: block;
     font-size: 36px;
-    color: #355C7D;
+    color: #F8B195;
     text-transform: uppercase;
     letter-spacing: -1px;
     font-weight: bold;
 }
 
-button {
+#record-info {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     background-color: #C06C84;
+}
+
+.button {
+    background-color: #F67280;
     display: block;
     border: none;
     color: white;
