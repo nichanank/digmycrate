@@ -1,5 +1,5 @@
 <div class=header>
-    <h1 id="title">Dig my Crate</h1>
+    <h1>A simple application to explore a record collection.</h1>
 </div>
 <div id="record-info" align="center">
     <h2><%= @picked_record.title %> (<%= @picked_record.year %>)</h2>
@@ -12,18 +12,16 @@
         <div class="plans clearfix">
             <div class="col-lg-3 col-lg-offset-3 plan">
                 <h2>Tracklist</h2>
-                <div class="price pull-right">Price: $10</div>
                 <div class="features">
                     <ul>
-                        <li>Track 1</li>
-                        <li>Track 2</li>
-                        <li>Track 3</li>
+                        <% for track in @picked_record.tracklist %>
+                        <li><%= track.position %> - <%= track.title %></li>
+                        <% end %>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-3 plan">
                 <h2>Collaborators</h2>
-            <div class="price pull-right">Price: $20</div>
             <div class="features">
                 <ul>
                     <li>Artist 1</li>

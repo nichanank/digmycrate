@@ -14,20 +14,25 @@ class Collection
         @collection.releases.each do |release|
             @ids << release['id']
         end
-        puts @ids
         @ids
     end
     
     def pick_random_record(ids)
         random_pick = ids.sample
-        title = @wrapper.get_release(random_pick)['title']
-        artist = @wrapper.get_release(random_pick).artists[0].name
-        year = @wrapper.get_release(random_pick).year
-        genre = @wrapper.get_release(random_pick)['genres'].join(", ")
-        styles = @wrapper.get_release(random_pick)['styles'].join(", ")
-        description = @wrapper.get_release(random_pick)['profile']
-        cover_image = @wrapper.get_release(random_pick).images[0]
-        picked_record = Record.new(title, artist, year, genre, styles, cover_image, description)
+        raw_record_info = @wrapper.get_release(random_pick)
+        title = raw_record_info['title']
+        artist = raw_record_info.artists[0].name
+        year = raw_record_info.year
+        genre = raw_record_info['genres'].join(", ")
+        if raw_record_info['styles'].nil?
+            styles = []
+        else 
+            styles = raw_record_info['styles'].join(", ")
+        end
+        description = raw_record_info['profile']
+        cover_image = raw_record_info.images[0]
+        tracklist = raw_record_info.tracklist
+        picked_record = Record.new(title, artist, year, genre, styles, cover_image, description, tracklist)
         picked_record
     end
 
