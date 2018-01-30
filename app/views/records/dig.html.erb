@@ -1,11 +1,11 @@
 <div class=header>
-    <h1>A simple application to explore a record collection.</h1>
+    <h1>A simple way to explore a record collection...</h1>
 </div>
 <div id="record-info" align="center">
     <h2><%= @picked_record.title %> (<%= @picked_record.year %>)</h2>
-    <h2><%= @picked_record.artist %></h2>
-    <h2><%= @picked_record.genre %></h2>
-    <h2><%= @picked_record.styles %></h2>
+    <h3><%= @picked_record.artist %></h2>
+    <p><%= @picked_record.genre %></h2>
+    <p><%= @picked_record.styles %></h2>
     <p class="lead">Album information here...</p>
 </div>
     <div class="row">
@@ -13,7 +13,7 @@
             <div class="col-lg-3 col-lg-offset-3 plan">
                 <h2>Tracklist</h2>
                 <div class="features">
-                    <ul>
+                    <ul class="tracklist">
                         <% for track in @picked_record.tracklist %>
                         <li><%= track.position %> - <%= track.title %></li>
                         <% end %>
@@ -32,5 +32,5 @@
             </div>
         </div>
     </div>
-    <%= link_to "dig!", dig_path, class: "button" %>
+    <%= link_to "Dig again!", dig_path, class: "button" %>
 </div>

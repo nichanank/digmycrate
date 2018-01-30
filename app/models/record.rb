@@ -3,6 +3,7 @@ class Record
     attr_accessor :title, :artist, :year, :genre, :styles, :cover_image, :description, :tracklist
     
     def initialize(raw_record_info)
+        puts raw_record_info
         parse_raw_info(raw_record_info)
     end
     
@@ -19,11 +20,6 @@ class Record
         @description = raw_record_info['profile']
         @cover_image = raw_record_info.images[0]
         @tracklist = raw_record_info.tracklist
-    end
-    
-    def record_info_dict
-        dict = { "title" => @title, "artist" => @artist, "year" => @year, "genre" => genre, "styles" => styles, "img" => cover_image, "description" => @description }
-        dict
     end
 
 end

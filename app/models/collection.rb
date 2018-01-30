@@ -1,6 +1,6 @@
 class Collection
     
-    attr_accessor :records
+    attr_accessor :record_ids
     
     #Records is an array of Hashes for record info, pulled from Discogs user data
     def initialize(user_name)
@@ -10,11 +10,11 @@ class Collection
     
     #Returns an array of record IDs in a collection
     def get_record_ids
-        @ids = []
-        @collection.releases.each do |release|
-            @ids << release['id']
+        @record_ids = []
+        for release in @collection.releases
+            @record_ids << release['id']
         end
-        @ids
+        @record_ids
     end
     
     def pick_random_record(ids)
