@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-To see app in action, simply go to http://digmycrate.herokuapp.com and Start Digging!
+To see app in action, simply go to [Dig My Crate](http://digmycrate.herokuapp.com) and Start Digging!
 
 ## To-do's
 * 🖼 Add album art (requires authentication)
