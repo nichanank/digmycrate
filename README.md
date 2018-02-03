@@ -1,24 +1,23 @@
-# README
+# Dig My Crate
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple Rails application to explore records from my Discogs collection.
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+To see app in action, simply go to http://digmycrate.herokuapp.com and Start Digging!
 
-* System dependencies
+## To-do's
+* Add album art (requires authentication)
+* Allow exploration of other Discogs user collections
+* Embed YouTube videos/playlists for album tracks
+* Visual enhancements
+* Add tests
 
-* Configuration
+# System versions
+* Ruby version: 2.3.4
+* Rails 5.1.4
 
-* Database creation
+# Acknowledgements
+A huge kudos to [Andrew Buntine](https://github.com/buntine) and all [contributors](https://github.com/buntine/discogs/graphs/contributors) to the [Ruby wrapper](https://github.com/buntine/discogs) for the Discogs API.
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
