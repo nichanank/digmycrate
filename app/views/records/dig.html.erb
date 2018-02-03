@@ -1,7 +1,14 @@
-<div class=header>
-    <h1>You've picked up...</h1>
+<div class="header">
+    <h3>Currently exploring <i><%= @username %></i>'s collection.
+    <!--<span><form class="form-inline">-->
+    <!--    <input class="form-control form-control-sm" type="text" placeholder="Discogs username">-->
+    <!--    <button type="submit" class="btn btn-primary mb-2">Switch crates</button>-->
+    <!--    </form></span></h3>-->
+    <h3>You've picked up...</h3>
+    
 </div>
 <div id="record-info" align="center">
+    <%= image_tag("vinyl.png", size: "200x160", :alt => "vinyl") %>
     <h2><%= @picked_record.title %> (<%= @picked_record.year %>)</h2>
     <h3><%= @picked_record.artist %></h3>
     <h4><%= @picked_record.genre %></h4>
@@ -10,7 +17,7 @@
     <div class="row">
         <div class="plans clearfix">
             <div class="col-lg-3 col-lg-offset-3 plan">
-                <h2>Tracklist</h2>
+                <h3>Tracklist</h3>
                 <div class="features">
                     <ul class="tracklist">
                         <% for track in @picked_record.tracklist %>
@@ -20,7 +27,7 @@
                 </div>
             </div>
             <div class="col-lg-3 plan">
-                <h2>About the artist</h2>
+                <h3>About the artist</h3>
             <div class="features">
                 <p><%= @picked_record_artist.profile %></p>
             </div>
@@ -28,11 +35,11 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-3">
-          <div class="video-container embed-responsive embed-responsive-16by9">
+        <div class="video-container col-6">
+          <div class="embed-responsive embed-responsive-16by9">
             <iframe src='https://www.youtube.com/embed/<%= @picked_record.youtube_id %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
           </div>
-          <h5 align="center"><%= @picked_record.video_title %></h5>
+          <h3 align="center"><%= @picked_record.video_title %></h5>
         </div>
       </div>
     </div>

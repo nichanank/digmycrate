@@ -1,11 +1,12 @@
 class Collection
     
-    attr_accessor :record_ids
+    attr_accessor :record_ids, :owner
     
     #Records is an array of Hashes for record info, pulled from Discogs user data
-    def initialize(user_name)
+    def initialize(username)
+        @owner = username
         @wrapper = Discogs::Wrapper.new("digmycrate")
-        @collection = @wrapper.get_user_collection(user_name)
+        @collection = @wrapper.get_user_collection(username)
     end
     
     #Returns an array of record IDs in a collection
