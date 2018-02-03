@@ -30,10 +30,18 @@ h2 {
 }
 
 p {
-   font-size: 22px; 
-   text-align: center;
+   font-size: 14px; 
+   text-align: left;
    display: block;
    margin-top: 5px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   max-width: 500px;
+}
+
+.video-container {
+    display: block;
+    text-align: center;
 }
 
 #record-info {

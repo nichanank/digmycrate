@@ -3,9 +3,9 @@
 </div>
 <div id="record-info" align="center">
     <h2><%= @picked_record.title %> (<%= @picked_record.year %>)</h2>
-    <h3><%= @picked_record.artist %></h2>
-    <p><%= @picked_record.genre %></h2>
-    <p><%= @picked_record.styles %></h2>
+    <h3><%= @picked_record.artist %></h3>
+    <h4><%= @picked_record.genre %></h4>
+    <h4><%= @picked_record.styles if !@picked_record.styles.empty? %></h4>
 </div>
     <div class="row">
         <div class="plans clearfix">
@@ -22,11 +22,19 @@
             <div class="col-lg-3 plan">
                 <h2>About the artist</h2>
             <div class="features">
-                <ul>
-                    <%= @picked_record_artist.profile %>
-                </ul>   
+                <p><%= @picked_record_artist.profile %></p>
             </div>
         </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <div class="video-container embed-responsive embed-responsive-16by9">
+            <iframe src='https://www.youtube.com/embed/<%= @picked_record.youtube_id %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
+          </div>
+          <h5 align="center"><%= @picked_record.video_title %></h5>
+        </div>
+      </div>
     </div>
     <%= link_to "Dig again!", dig_path, class: "button" %>
 </div>
