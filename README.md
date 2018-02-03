@@ -18,7 +18,7 @@ To see app in action, simply go to [Dig My Crate](http://digmycrate.herokuapp.co
 * 🛤 Rails 5.1.4
 
 ### Acknowledgements
-🙏🏼 A huge kudos to [Andrew Buntine](https://github.com/buntine) and all [contributors](https://github.com/buntine/discogs/graphs/contributors) to the [Ruby wrapper](https://github.com/buntine/discogs) for the [Discogs API](https://www.discogs.com/developers/).
-📷 [Icon source](https://pixabay.com/en/vinyl-platinum-disk-music-dj-2241789/)
+* 🏼 A huge kudos to [Andrew Buntine](https://github.com/buntine) and all [contributors](https://github.com/buntine/discogs/graphs/contributors) to the [Ruby wrapper](https://github.com/buntine/discogs) for the [Discogs API](https://www.discogs.com/developers/).
+* 📷 [Icon source](https://pixabay.com/en/vinyl-platinum-disk-music-dj-2241789/)
 
 
