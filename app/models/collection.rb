@@ -19,8 +19,8 @@ class Collection
     
     def pick_random_record(ids)
         random_pick = ids.sample
-        raw_record_info = @wrapper.get_release(random_pick)
-        picked_record = Record.new(raw_record_info)
+        @raw_record_info = @wrapper.get_release(random_pick)
+        picked_record = Record.new(@raw_record_info)
         picked_record
     end
 

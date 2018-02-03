@@ -1,5 +1,5 @@
 <div class=header>
-    <h1>A simple way to explore a record collection...</h1>
+    <h1>You've picked up...</h1>
 </div>
 <div id="record-info" align="center">
     <h2><%= @picked_record.title %> (<%= @picked_record.year %>)</h2>
@@ -21,13 +21,11 @@
                 </div>
             </div>
             <div class="col-lg-3 plan">
-                <h2>Collaborators</h2>
+                <h2>About the artist</h2>
             <div class="features">
                 <ul>
-                    <li>Artist 1</li>
-                    <li>Artist 2</li>
-                    <li>Artist 3</li>
-                    <li class='extra'>Unlimited projects</li>
+                    <%= @picked_record_artist.profile %>
+                    <%= @picked_record.description %>
                 </ul>   
             </div>
         </div>
