@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-To see app in action, simply go to [Dig My Crate](http://digmycrate.herokuapp.com) and Start Digging! You can read more about the project and ongoing developments [here](http://www.nichanank.com/blog/2018/1/31/dig-my-crate-my-first-ruby-project-inspired-by-record-collecting)
+To see app in action, simply go to [Dig My Crate](http://digmycrate.herokuapp.com) and Start Digging! You can read more about the project and ongoing developments [here](http://www.nichanank.com/blog/2018/1/31/dig-my-crate-my-first-ruby-project-inspired-by-record-collecting).
 
 ## To-do's
 * 🖼 Add album art (requires authentication)
