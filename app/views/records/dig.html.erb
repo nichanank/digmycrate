@@ -18,8 +18,8 @@
         <div class="plans clearfix">
             <div class="col-lg-3 col-lg-offset-3 plan">
                 <h3>Tracklist</h3>
-                <div class="features">
-                    <ul class="tracklist">
+                <div class="tracklist">
+                    <ul>
                         <% for track in @picked_record.tracklist %>
                         <li><%= track.position %> - <%= track.title %></li>
                         <% end %>
@@ -45,3 +45,4 @@
     </div>
     <%= link_to "Dig again!", dig_path, class: "button" %>
 </div>
+<%= render 'layouts/footer' %>
