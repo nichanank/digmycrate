@@ -11,10 +11,11 @@ To see app in action, simply go to [Dig My Crate](http://digmycrate.herokuapp.co
 * 👥 Allow exploration of other Discogs user collections 
 * 📺 Embed YouTube videos/playlists for album tracks
 * 👀 Visual enhancements 
+* 🛠 Improve error handling robusticity
 * ✅ Add tests
 
 ### System versions
-* ♦️ Ruby version: 2.3.4
+* ♦️ Ruby 2.3.4
 * 🛤 Rails 5.1.4
 
 ### Acknowledgements
