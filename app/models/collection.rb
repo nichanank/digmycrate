@@ -18,6 +18,7 @@ class Collection
         @record_ids
     end
     
+    #Picks an ID at random from an array and returns a Record object.
     def pick_random_record(ids)
         random_pick = ids.sample
         @raw_record_info = @wrapper.get_release(random_pick)

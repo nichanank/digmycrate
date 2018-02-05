@@ -2,6 +2,7 @@ class Artist
     
     attr_accessor :profile
     
+    #Obtains raw artist data from API and assigns the artist profile description.
     def initialize(artist_id)
         @wrapper = Discogs::Wrapper.new("digmycrate")
         raw_artist_info = @wrapper.get_artist(artist_id)

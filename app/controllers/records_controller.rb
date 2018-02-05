@@ -1,5 +1,8 @@
 class RecordsController < ApplicationController
     
+    #Obtains a Discog user's collection data and picks a random recrd from it.
+    #TO DO: handle non-existent or empty collection
+    
     def dig(username="nichanank")
         @username = username
         collection = Collection.new(username)
